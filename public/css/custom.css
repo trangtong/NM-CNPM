@@ -1,0 +1,35 @@
+/*============================================================================================*/
+/* Your custom styles below */
+/*============================================================================================*/
+
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 6rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+  }
+
+  .alert--success {
+    background-color: rgb(0, 192, 127, 0.9);
+  }
+
+  .alert--error {
+    background-color: rgba(235, 77, 75, 0.9);
+  }
+
+  #thumb_cart_small {
+    width: 30%;
+    height: 30%;
+  }

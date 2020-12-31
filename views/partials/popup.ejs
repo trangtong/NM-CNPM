@@ -1,0 +1,103 @@
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+	   <div class="modal-content">
+		  <div class="modal-body">
+			 <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+				<span aria-hidden="true">&times;</span>
+			 </button>
+			 <div class="main mt-auto">
+				<form action="" method="post">
+				    <div class="d-flex justify-content-center" style="position: relative">
+					   <div class="row">
+						  <div class="col form-group">
+						  <!--  avatar image-->
+						  <img id="avatarEdit" src="#" alt="" class="avatar"  style="display: block" />
+						  <!-- avatar edit icon -->
+						  <label for="inputImg" id="editIcon"></label>
+						  <!-- accept image only-->
+						  <input
+							 type="file"
+							 class="form-control-file"
+							 id="inputImg"
+							 name="photo"
+							 accept="image/*"
+							 style="display: none"
+						  />
+						  </div>
+					   </div>
+					   </div>
+					   <!-- content -->
+					   <div class="d-flex justify-content-center mt-5">
+						  <div class="col">
+							 <!-- Personal info -->
+							 <div class="row">
+								<div class="d-flex align-items-center col-md-1 col-2 pb-2">
+								    <img
+								    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/portfolio-285-692609.png"
+								    alt=""
+								    width="25px"
+								    height="25px"
+								    />
+								</div>
+								<div class="col">
+									   <h3>Personal info</h3>
+								</div>
+							 </div>
+							 <!-- hr -->
+							 <div class="row">
+								<div class="col">
+								    <hr class="my-4" />
+								</div>
+							 </div>
+							 <div class="form-group">
+								<div class="row">
+								    <div class="col-md-4 col-4 d-flex align-items-end">
+									   <label for="email"><strong>Email</strong></label>
+								    </div>
+								    <div class="col">
+											 <input
+												type="email"
+												class="form-control"
+												id="email"
+												name="email"
+												value="sample@gmail.com"
+												required
+											 />
+								    </div>
+								</div>
+							 </div>
+							 <div class="form-group">
+								<div class="row">
+								    <div class="col-md-4 col-4 d-flex align-items-end">
+									   <label for="name"><strong>Tên</strong></label>
+									   </div>
+										  <div class="col">
+											 <input
+												type="text"
+												class="form-control"
+												id="name"
+												name="name"
+												value="Võ   Thị Sáu"
+												required
+											 />
+										  </div>
+									   </div>
+								    </div>
+								</div>
+							 </div>
+							 <div class="row d-flex justify-content-center mt-5">
+								 <div class="col-2">
+									<button type="submit" class="update-btn">
+									Cập nhật
+									</button>
+								</div>
+							 </div>
+						  </div>
+					   </div>
+				    </div>
+				</form>
+			 </div>
+		  </div>
+	   </div>
+    </div>
+</div>

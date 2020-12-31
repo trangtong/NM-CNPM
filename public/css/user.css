@@ -1,0 +1,66 @@
+.img-btn {
+  width: 40px;
+  height: 40px;
+}
+
+.img-btn:hover {
+  opacity: 0.7;
+}
+
+.img-button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.main.mt-auto {
+  margin-top: 100px !important;
+}
+
+label#editIcon {
+  border: none;
+  background: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://www.flaticon.com/svg/static/icons/svg/1057/1057097.svg');
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+label#editIcon:hover {
+  cursor: pointer;
+}
+
+.update-btn {
+  background: #b9dfff;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+}
+
+.update-btn:hover {
+  background: #016abc;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+}
+
+button.close:focus {
+  outline: none;
+}
+
+button#openEdit:focus {
+  outline: none;
+}

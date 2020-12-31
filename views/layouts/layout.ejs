@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+	<body>
+		<div class="page">
+			<!-- header -->
+			<%- include('../partials/header'); %>
+			<!-- body -->
+			<%- body %>
+			<!-- footer -->
+			<%- include('../partials/footer'); %>
+		</div>
+
+		<script src="/js/common_scripts.min.js"></script>
+		<script src="/js/main.js"></script>
+
+		<script src="/js/sticky_sidebar.min.js"></script>
+		<script src="/js/specific_listing.js"></script>
+
+		<script src="/js/carousel-home.min.js"></script>
+
+		<script src="/js/carousel-home.js"></script>
+
+		<script>
+			// Client type Panel
+			$('input[name="client_type"]').on("click", function () {
+				var inputValue = $(this).attr("value");
+				var targetBox = $("." + inputValue);
+				$(".box").not(targetBox).hide();
+				$(targetBox).show();
+			});
+		</script>
+
+		<script>
+			let tmp = document.getElementsByClassName("avatar");
+			for (let i = 0; i < tmp.length; i++) {
+				// disable dragging avatar image
+				tmp[i].setAttribute("draggable", false);
+				// set default avatar
+				if (tmp[i].getAttribute("src") === "#") {
+					tmp[i].src =
+						"https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png";
+				}
+			}
+		</script>
+		<!-- preview avatar  -->
+		<script>
+			document
+				.getElementById("inputImg")
+				.addEventListener("change", (event) => {
+					if (event.target.files && event.target.files[0]) {
+						let output = document.getElementById("avatarEdit");
+						// for Chrome and Webkit
+						output.src = window.webkitURL.createObjectURL(
+							event.target.files[0]
+						); // other method  URL.createObjectURL(event.target.files[0]);
+						output.onload = function () {
+							URL.revokeObjectURL(output.src); // free memory
+						};
+					}
+				});
+		</script>
+	</body>
+</html>
