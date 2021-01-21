@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Hoi nghi trienr lam ve nghi thuat quoc gia",
+        "startDate": "2021-01-21T03:19:30.898+00:00",
+        "endDate": "2021-01-21T03:20:30.898+00:00",
+        "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "imageCover": "test.jpg",
+        "address": "6009473cf99149364c13c115",
+        "maxCoferenceSize": 20
+    },
+    {
+        "name": "Hoi nghi ung dung tri tue nhan tao trong viec van hanh thanh pho thong minh",
+        "startDate": "2021-01-19T03:19:30.898+00:00",
+        "endDate": "2021-01-19T03:21:30.898+00:00",
+        "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "imageCover": "test.jpg",
+        "address": "6009473cf99149364c13c116",
+        "maxCoferenceSize": 20
+    }
+]
+    

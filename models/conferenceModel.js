@@ -45,7 +45,7 @@ const conferenceSchema = new mongoose.Schema({
   required: [true, 'A conferencne must have a image to cover']
  },
  images: [String],
- address: {
+ venue: {
   type: mongoose.Schema.Types.ObjectId,
   ref: 'Venue',
   required: [true, 'A conference must hold in one address']
@@ -68,14 +68,25 @@ const conferenceSchema = new mongoose.Schema({
  createdDate: {
   type: Date,
   default: Date.now()
+ },
+ active: {
+  type: Boolean,
+  default: true
  }
 });
 
+conferenceSchema.index({ name: 'text' });
+
 conferenceSchema.plugin(mongoosePaginate);
 
-conferenceSchema.pre('^find', function (next) {
+conferenceSchema.pre(/^find/, function (next) {
+ this.find({ active: { $ne: false } });
+ next();
+});
+
+conferenceSchema.pre(/^find/, function (next) {
  this.populate({
-  path: 'address'
+  path: 'venue'
  });
 
  next();
