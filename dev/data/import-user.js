@@ -16,12 +16,12 @@ mongoose
   console.log('Connect to database successful');
  });
 
-const rackets = JSON.parse(fs.readFileSync(`${__dirname}/data-user.json`));
+const users = JSON.parse(fs.readFileSync(`${__dirname}/data-user.json`));
 
 // import database
 const importData = async () => {
  try {
-  await User.create(rackets);
+  await User.create(users);
   console.log('successful');
   process.exit();
  } catch (err) {
@@ -32,11 +32,11 @@ const importData = async () => {
 //delete data
 const deleteData = async () => {
  try {
-  await Racket.deleteMany();
+  await User.deleteMany();
   console.log('successful');
   process.exit();
  } catch (error) {
-  console.log(err);
+  console.log(error);
  }
 };
 

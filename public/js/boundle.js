@@ -8556,21 +8556,25 @@ var register = /*#__PURE__*/function () {
 
           case 3:
             res = _context3.sent;
-            _context3.next = 10;
+            (0, _alert.showAlert)('success', 'Register successfully');
+            setTimeout(function () {
+              window.location.assign('/');
+            }, 1000);
+            _context3.next = 12;
             break;
 
-          case 6:
-            _context3.prev = 6;
+          case 8:
+            _context3.prev = 8;
             _context3.t0 = _context3["catch"](0);
             console.log(_context3.t0);
             (0, _alert.showAlert)('error', _context3.t0.message);
 
-          case 10:
+          case 12:
           case "end":
             return _context3.stop();
         }
       }
-    }, _callee3, null, [[0, 6]]);
+    }, _callee3, null, [[0, 8]]);
   }));
 
   return function register(_x4, _x5, _x6, _x7, _x8, _x9) {

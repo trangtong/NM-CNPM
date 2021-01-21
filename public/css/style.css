@@ -2218,9 +2218,7 @@ header ul.top_tools > li a.btn_cat_mob .hamburger-box {
 header ul.top_tools > li a.wishlist:before {
 	content: '\0041';
 }
-header ul.top_tools > li a.access_link:before {
-	content: '\0043';
-}
+
 header ul.top_tools > li a.cart_bt:before {
 	content: '\0042';
 }

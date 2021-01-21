@@ -55,13 +55,35 @@ exports.getOverview = catchAsync(async (req, res, next) => {
 });
 
 exports.getLogin = catchAsync(async (req, res, next) => {
+ if (req.user) {
+  res.redirect('/');
+ }
+
  res.status(200).render('login', {
   title: 'TTConference - Login'
  });
 });
 
 exports.getUserProfile = catchAsync(async (req, res, next) => {
+ if (!req.user) {
+  res.redirect('/');
+ }
+
  res.status(200).render('profile', {
   title: 'Profile'
+ });
+});
+
+exports.getChangePassword = catchAsync(async (req, res, next) => {
+ if (!req.user) res.redirect('/');
+ res.status(200).render('updatePassword', {
+  title: 'Change password'
+ });
+});
+
+exports.getResetPassword = catchAsync(async (req, res, next) => {
+ if (!req.user) res.redirect('/');
+ res.status(200).render('resetPassword', {
+  title: 'Reset password'
  });
 });

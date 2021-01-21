@@ -5,31 +5,34 @@
         "lastName": "Say oh yeah",
         "email": "trminh36@gmail.com",
         "phone": "0901237453",
-        "photo": "default.png",
+        "photo": "default.jpg",
         "role": "admin",
         "password": "12345678",
         "passwordConfirm": "12345678",
-        "active": true
+        "active": true,
+        "address": "VNU - DHQG TPHCM, HCMUS"
     },
     {
         "name": "nguyen duc",
         "lastName": "Minh Tri",
         "email": "trminh9@gmail.com",
         "phone": "0907894215",
-        "photo": "default.png",
+        "photo": "default.jpg",
         "password": "12345678",
         "passwordConfirm": "12345678",
-        "active": true
+        "active": true,
+        "address": "Thu Duc, Lang Dai hoc"
     },
     {
         "name": "Tai",
         "lastName": "Smile",
         "email": "skyoimtp@gmail.com",
-        "phone": "0807854125",
-        "photo": "default.png",
+        "phone": "0907874125",
+        "photo": "default.jpg",
         "password": "12345678",
         "passwordConfirm": "12345678",
-        "active": true
+        "active": true,
+        "address": "KTX Khu B, Di An, Binh Duong"
     },
     {
         "name": "ttg",
@@ -39,27 +42,30 @@
         "photo": "ttg.png",
         "password": "12345678",
         "passwordConfirm": "12345678",
-        "active": true
+        "active": true,
+        "address": "Truong DHKHXHNV, DHQG HCM"
     },
     {
         "name": "Donald",
         "lastName": "Trump",
         "email": "ttrump@yahoo.com",
         "phone": "0901237625",
-        "photo": "default.png",
+        "photo": "default.jpg",
         "password": "12345678",
         "passwordConfirm": "12345678",
-        "active": true
+        "active": true,
+        "address": "Califonina, America"
     },
     {
         "name": "Joe",
         "lastName": "Biden",
         "email": "biden@github.io",
         "phone": "0972531223",
-        "photo": "default.png",
+        "photo": "default.jpg",
         "password": "12345678",
         "passwordConfirm": "12345678",
-        "active": true
+        "active": true,
+        "address": "White House, America"
     }
 ]
   
