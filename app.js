@@ -1,48 +1,44 @@
-const createError = require("http-errors");
-const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const logger = require("morgan");
-const expressLayouts = require("express-ejs-layouts");
-
-const indexRouter = require("./routes/index");
-const userRouter = require("./routes/user");
-const listingRouter = require("./routes/listing");
-const aboutRouter = require("./routes/about");
+const express = require('express');
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const errorHandler = require('./controller/errorController');
+const userRouter = require('./routes/userRouter');
+const cors = require('cors');
 
 const app = express();
-
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
-app.set("layout", path.join(__dirname, "./views/layouts/layout"));
-
-app.use(expressLayouts);
-app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
-app.use("/user", userRouter);
-app.use("/listing", listingRouter);
-app.use("/about", aboutRouter);
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-	next(createError(404));
-});
+// just for local test
+// it can remove error cors (http)
+app.use(
+  cors({
+    origin: ['http://127.0.0.1:8000', 'https://adminttshopvn.herokuapp.com'],
+    credentials: true,
+    exposedHeaders: ['X-Paging-Count', 'X-Paging-Current']
+  })
+);
 
-// error handler
-app.use(function (err, req, res, next) {
-	// set locals, only providing error in development
-	res.locals.message = err.message;
-	res.locals.error = req.app.get("env") === "development" ? err : {};
+app.options('*', cors());
 
-	// render the error page
-	res.status(err.status || 500);
-	res.render("error");
-});
+app.use(express.static(`${__dirname}/public`));
+app.set('view engine', 'pug');
+app.set('views', `${__dirname}/views`);
+
+// FOR VIEW (SERVER RENDER) (uncomment for test render)
+app.use('/', viewRouter);
+
+// FOR API (CLIENT RENDER) (uncomment for test api)
+app.use('/api/v1/user', userRouter);
+app.use('/api/v1/racket', racketRouter);
+app.use('/api/v1/review', reviewRouter);
+
+// default middleware handler
+// app.use(function(err, req, res, next))
+app.use(errorHandler.globalErrorHandler);
 
 module.exports = app;
