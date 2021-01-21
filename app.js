@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
-const errorHandler = require('./controllers/errorController');
+const errorHandler = require('./controller/errorController');
 const userRouter = require('./routes/userRouter');
 const cors = require('cors');
 
@@ -34,8 +34,6 @@ app.use('/', viewRouter);
 
 // FOR API (CLIENT RENDER) (uncomment for test api)
 app.use('/api/v1/user', userRouter);
-app.use('/api/v1/racket', racketRouter);
-app.use('/api/v1/review', reviewRouter);
 
 // default middleware handler
 // app.use(function(err, req, res, next))
