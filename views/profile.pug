@@ -1,0 +1,206 @@
+extends base
+
+block append head
+
+  // YOUR CUSTOM CSS
+  link(href='/css/user.css' rel='stylesheet')
+
+block content
+  main
+    // main
+    .container.main.mt-auto
+      // avatar image
+      .d-flex.justify-content-center
+        .row
+          .col
+            img#avatarProfile.avatar(src= `../img/users/${user.photo}` alt='')
+      // avatar caption
+      .d-flex.justify-content-center.mt-4
+        .row
+          .col
+            h3
+              strong= `${user.name} ${user.lastName}`
+      // Personal info
+      .d-flex.justify-content-center.mt-5
+        .col-10
+          .row
+            .d-flex.align-items-center.col-md-1.col-2.pb-2
+              img(src='https://cdn.iconscout.com/icon/premium/png-256-thumb/portfolio-285-692609.png' alt='' width='25px' height='25px')
+            .col
+              h3 Thông tin cá nhân
+          .row
+            .col-9
+              hr.my-4
+            button#openEdit.img-button(data-toggle='modal' data-target='#edit')
+              img.img-btn(src='https://png.pngtree.com/png-clipart/20190629/original/pngtree-vector-edit-profile-icon-png-image_4102545.jpg' alt='')
+          .row
+            .col-md-2.col-4
+              p
+                strong Email
+            .col
+              p= user.email
+          .row
+            .col-md-2.col-4
+              p
+                strong H&#x1ECD; v&agrave; t&ecirc;n
+            .col
+              p= `${user.name} ${user.lastName}`
+          .row
+            .col-md-2.col-4
+              p
+                strong S&#x1ED1; &dstrok;i&#x1EC7;n tho&#x1EA1;i
+            .col
+              p= user.phone
+          .row
+            .col-md-2.col-4
+              p
+                strong &Dstrok;&#x1ECB;a ch&#x1EC9;
+            .col
+              p= user.address
+
+          .row
+            .col-md-2.col-4
+              p
+                strong Mật khẩu
+            .col
+              p 
+                a(href="/user/updatePassword") Đổi mật khẩu
+
+      .container.bill(style='margin-top: 100px')
+        h2 Your orders
+          table.table
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') Name
+                th(scope='col') Price
+                th(scope='col') Status
+                th(scope='col') Shipping Unit
+            tbody
+              tr
+                th(scope='row') 1
+                td
+                  a(href='./product-detail.html' target='_blank') Mark
+                td 1000
+                td @mdo
+                td EXPRESS
+              tr
+                th(scope='row') 2
+                td
+                  a(href='./product-detail.html' target='_blank') Jacob
+                td 200
+                td @fat
+                td VIETTEL POST
+              tr
+                th(scope='row') 3
+                td
+                  a(href='./product-detail.html' target='_blank') Larry
+                td 300
+                td @twitter
+                td Giao hang tiet kiem
+            .row
+              .col
+                h4
+                  | Total: 
+                  span 3000
+                  |  VND
+
+
+block append outBody 
+  // modal-wrapper
+  #edit.modal.fade(role='dialog' aria-labelledby='exampleModalLongTitle' aria-hidden='true')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+          .main.mt-auto
+            form#formUpdateInfo
+              .d-flex.justify-content-center(style='position: relative')
+                .row
+                  .col.form-group
+                    // avatar image
+                    img#avatarEdit.avatar(src= `../img/users/${user.photo}` alt='' style='display: block')
+                    // avatar edit icon
+                    label#editIcon(for='inputImg')
+                    // accept image only
+                    input#inputImg.form-control-file(type='file' name='avatar' accept='image/*' style='display: none' enctype="multipart/form-data")
+              // content
+              .d-flex.justify-content-center.mt-5
+                .col
+                  // Personal info
+                  .row
+                    .d-flex.align-items-center.col-md-1.col-2.pb-2
+                      img(src='https://cdn.iconscout.com/icon/premium/png-256-thumb/portfolio-285-692609.png' alt='' width='25px' height='25px')
+                    .col
+                      h3 Thông tin cá nhân
+                  // hr
+                  .row
+                    .col
+                      hr.my-4
+                  .form-group
+                    .row
+                      .col-md-4.col-4.d-flex.align-items-end
+                        label(for='email')
+                          strong Email
+                      .col
+                        input#email.form-control(type='email' name='email' value= user.email disabled="disabled")
+                  .form-group
+                    .row
+                      .col-md-4.col-4.d-flex.align-items-end
+                        label(for='name')
+                          strong Họ
+                      .col
+                        input#name.form-control(type='text' name='name' value= `${user.name}` required='')
+                  .form-group
+                    .row
+                      .col-md-4.col-4.d-flex.align-items-end
+                        label(for='lastName')
+                          strong Tên
+                      .col
+                        input#lastName.form-control(type='text' name='lastName' value= `${user.lastName}` required='')
+                  .form-group
+                    .row
+                      .col-md-4.col-4.d-flex.align-items-end
+                        label(for='phone')
+                          strong S&#x1ED1; &dstrok;i&#x1EC7;n tho&#x1EA1;i
+                      .col
+                        input#phone.form-control(type='tel' name='phone' value= user.phone pattern='[0-9]{10}' required='' oninvalid="this.setCustomValidity('Please enter 10 digit for phone')" oninput="this.setCustomValidity('')")
+                  .form-group
+                    .row
+                      .col-md-4.col-4.d-flex.align-items-end
+                        label(for='address')
+                          strong &Dstrok;&#x1ECB;a ch&#x1EC9;
+                      .col
+                        input#address.form-control(type='text' name='address' value= user.address required='')
+                  .row.d-flex.justify-content-center.mt-5
+                    button.update-btn(type='submit')
+                      | C&#x1EAD;p nh&#x1EAD;
+                
+              .container.bill(style='margin-top: 100px')
+
+    script.
+      let tmp = document.getElementsByClassName('avatar');
+      for(let i = 0; i < tmp.length; i++) {
+      // disable dragging avatar image
+      tmp[i].setAttribute('draggable', false);
+      // set default avatar
+      if (tmp[i].getAttribute('src') === '#') {
+      tmp[i].src =
+      'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png';
+      }
+      }
+    // preview avatar
+    script.
+      document
+      .getElementById('inputImg')
+      .addEventListener('change', (event) => {
+      if (event.target.files && event.target.files[0]) {
+      let output = document.getElementById('avatarEdit');
+      // for Chrome and Webkit
+      output.src = window.webkitURL.createObjectURL(event.target.files[0]); // other method  URL.createObjectURL(event.target.files[0]);
+      output.onload = function () {
+      URL.revokeObjectURL(output.src); // free memory
+      };
+      }
+      });

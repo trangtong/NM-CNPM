@@ -1,0 +1,66 @@
+
+[
+    {
+        "name": "ndmt1at",
+        "lastName": "Say oh yeah",
+        "email": "trminh36@gmail.com",
+        "phone": "0901237453",
+        "photo": "default.png",
+        "role": "admin",
+        "password": "12345678",
+        "passwordConfirm": "12345678",
+        "active": true
+    },
+    {
+        "name": "nguyen duc",
+        "lastName": "Minh Tri",
+        "email": "trminh9@gmail.com",
+        "phone": "0907894215",
+        "photo": "default.png",
+        "password": "12345678",
+        "passwordConfirm": "12345678",
+        "active": true
+    },
+    {
+        "name": "Tai",
+        "lastName": "Smile",
+        "email": "skyoimtp@gmail.com",
+        "phone": "0807854125",
+        "photo": "default.png",
+        "password": "12345678",
+        "passwordConfirm": "12345678",
+        "active": true
+    },
+    {
+        "name": "ttg",
+        "lastName": "Dũng CT",
+        "email": "ttgshop@github.io",
+        "phone": "0901561228",
+        "photo": "ttg.png",
+        "password": "12345678",
+        "passwordConfirm": "12345678",
+        "active": true
+    },
+    {
+        "name": "Donald",
+        "lastName": "Trump",
+        "email": "ttrump@yahoo.com",
+        "phone": "0901237625",
+        "photo": "default.png",
+        "password": "12345678",
+        "passwordConfirm": "12345678",
+        "active": true
+    },
+    {
+        "name": "Joe",
+        "lastName": "Biden",
+        "email": "biden@github.io",
+        "phone": "0972531223",
+        "photo": "default.png",
+        "password": "12345678",
+        "passwordConfirm": "12345678",
+        "active": true
+    }
+]
+  
+

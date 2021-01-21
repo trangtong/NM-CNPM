@@ -59,3 +59,9 @@ exports.getLogin = catchAsync(async (req, res, next) => {
   title: 'TTConference - Login'
  });
 });
+
+exports.getUserProfile = catchAsync(async (req, res, next) => {
+ res.status(200).render('profile', {
+  title: 'Profile'
+ });
+});
