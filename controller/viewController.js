@@ -76,14 +76,14 @@ exports.getUserProfile = catchAsync(async (req, res, next) => {
 
 exports.getChangePassword = catchAsync(async (req, res, next) => {
  if (!req.user) res.redirect('/');
- res.status(200).render('updatePassword', {
+ res.status(200).render('passwordUpdate', {
   title: 'Change password'
  });
 });
 
 exports.getResetPassword = catchAsync(async (req, res, next) => {
  if (!req.user) res.redirect('/');
- res.status(200).render('resetPassword', {
+ res.status(200).render('passwordReset', {
   title: 'Reset password'
  });
 });

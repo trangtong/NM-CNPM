@@ -11,4 +11,10 @@ router.get(
  authController.isLoggedIn,
  viewController.getUserProfile
 );
+router.get(
+ '/user/updatePassword',
+ authController.isLoggedIn,
+ viewController.getChangePassword
+);
+
 module.exports = router;
