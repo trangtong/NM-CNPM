@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
-const errorHandler = require('./controller/errorController');
+const errorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRouter');
 const cors = require('cors');
 
