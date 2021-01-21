@@ -53,3 +53,9 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   ]
  });
 });
+
+exports.getLogin = catchAsync(async (req, res, next) => {
+ res.status(200).render('login', {
+  title: 'TTConference - Login'
+ });
+});

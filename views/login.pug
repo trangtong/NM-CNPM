@@ -1,0 +1,60 @@
+extends base
+
+block content
+  main.bg_gray
+    .container.margin_30
+      .page_header
+          h1 Sign In or Create an Account
+      // /page_header
+      .row.justify-content-center
+        .col-xl-6.col-lg-6.col-md-8
+          .box_account
+            h3.client Already Client
+            form.form_container#form_login
+              .form-group
+                input#email.form-control(type='email' name='email' placeholder='Email*' autocomplete='on')
+              .form-group
+                input#password_in.form-control(type='password' name='password_in' value='' placeholder='Password*' autocomplete='on')
+              .clearfix.add_bottom_15
+                .float-left
+                  a#forgot(href='javascript:void(0);') Lost Password?
+              .text-center
+                input.btn_1.full-width(type='submit' value='Log In')
+              #forgot_pw
+                .form-group#form_forgot
+                  input#email_forgot.form-control(type='email' name='email_forgot' placeholder='Type your email' autocomplete='on')
+                p Thư xác nhận sẽ được gưir vào email.
+                .text-center
+                  input.btn_1(type='submit' value='Reset Password')
+            // /form_container
+          // /box_account
+          // /row
+        .col-xl-6.col-lg-6.col-md-8
+          .box_account
+            h3.new_client Đăng ký mới
+            small.float-right.pt-2 * Thông tin bắt buộc
+            form.form_container#form_register
+              .form-group
+                input#email_register.form-control(type='email' name='email' placeholder='Email*' required autocomplete='on')
+              .form-group
+                input#password_register.form-control(type='password' name='password' value='' placeholder='Password*' required autocomplete='on')
+              hr
+              .private.box
+                .row.no-gutters
+                  .col-6.pr-1
+                    .form-group
+                      input#name_register.form-control(type='text' placeholder='Tên*')
+                  .col-6.pl-1
+                    .form-group
+                      input#lastName_register.form-control(type='text' placeholder='Họ*')
+                  .col-12
+                    .form-group
+                      input#addr_register.form-control(type='text' placeholder='Địa chỉ*')
+                .row.no-gutters
+                  .col-6.pl-1
+                    .form-group
+                      input#phone_register.form-control(type='text' placeholder='Điện thoại *')
+                // /row
+              .text-center
+                input.btn_1.full-width(type='submit' value='Register')
+              
