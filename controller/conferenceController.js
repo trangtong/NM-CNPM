@@ -53,7 +53,7 @@ exports.getConferences = catchAsync(async (req, res, next) => {
   return next(new AppError('Provide limit query', 404));
  }
 
- let query = Conference.find();
+ let query = Conference.find().select('+active');
 
  if (req.query.name) {
   query = Conference.find({

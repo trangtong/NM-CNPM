@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const Venue = require('./venueModel');
 const mongoosePaginate = require('mongoose-paginate-v2');
+const AppError = require('../ultilities/appError');
 
 const conferenceSchema = new mongoose.Schema({
  name: {
@@ -17,10 +18,36 @@ const conferenceSchema = new mongoose.Schema({
   type: Date,
   required: [true, `Please provide conference's end time`],
   validate: {
-   validator: function (val) {
-    return this.startDate < val;
+   validator: async function (val) {
+    let conferences = await this.constructor.find({
+     $or: [
+      {
+       $and: [
+        { startDate: { $gte: this.startDate } },
+        { startDate: { $lte: this.endDate } }
+       ]
+      },
+      {
+       $and: [
+        { endDate: { $gte: this.startDate } },
+        { endDate: { $lte: this.endDate } }
+       ]
+      },
+      {
+       $and: [
+        { startDate: { $lte: this.startDate } },
+        { endDate: { $gte: this.endDate } }
+       ]
+      }
+     ]
+    });
+
+    if (conferences.length > 0) {
+     return false;
+    }
+    return true;
    },
-   message: 'End date: ({VALUE}) must larger than start date'
+   message: 'Conferences time overlap'
   }
  },
  summary: {
@@ -52,17 +79,16 @@ const conferenceSchema = new mongoose.Schema({
  },
  maxCoferenceSize: {
   type: Number,
-  required: {
-   validate: {
-    async func(val) {
-     let venue = await Venue.findById(address);
-     if (!venue) return false;
+  required: [true, 'A conference must have capacity size'],
+  validate: {
+   validator: async function (val) {
+    let venue = await Venue.findById(this.venue);
+    if (!venue) return false;
 
-     if (venue.capacity < value) return true;
-     return false;
-    }
+    if (venue.capacity >= val) return true;
+    return false;
    },
-   message: `Max conference's size must not larger than vanue's capacity`
+   message: `A conference's size smaller than venue capacity`
   }
  },
  createdDate: {
@@ -80,13 +106,30 @@ conferenceSchema.index({ name: 'text' });
 
 conferenceSchema.plugin(mongoosePaginate);
 
+//  currentStart ---------------------- currentEnd
+//  1. startDate or endDate between (currStart, currEnd)
+//  2. (currStart, currEnd) in (startDate, endDate)
+async function validDate(conferenceModel) {
+ let conferences = await conferenceModel.constructor.find();
+
+ let formatter = new Intl.DateTimeFormat('vi-VN', {
+  dateStyle: 'full'
+ });
+
+ if (conferences.count > 0) {
+  return false;
+ }
+
+ return true;
+}
+
 conferenceSchema.pre(/^find/, function (next) {
  this.find().select('-__v');
  next();
 });
 
 conferenceSchema.pre(/^find/, function (next) {
- this.find({ active: { $ne: false } });
+ this.find({ active: { $ne: false } }).select('-__v');
  next();
 });
 
