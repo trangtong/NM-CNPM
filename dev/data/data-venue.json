@@ -1,27 +1,47 @@
 [
-    {
-        "name": "Trung Tam GDTX",
-        "address": "232 Trung Tam GDTX, Ly Thuong Kiet, Phuong 24, Quan 12, TPHCM", 
-        "capacity": 300
-    },
-    {
-        "name": "Nha Van hoa Thieu nhi Thu Duc",
-        "address": "64 Vo Van Ngan, Phuong 96, Quan 69, TPHCM", 
-        "capacity": 100
-    },
-    {
-        "name": "Nha thi dau Phu Tho",
-        "address": "17 Kha Van Can, Phuong 21, Quan 10, TPHCM", 
-        "capacity": 1000
-    },
-    {
-        "name": "San van dong Quan Doi",
-        "address": "124, duong Vo Thi Sau, Phuong 7, Quan 6, TPHCM", 
-        "capacity": 300
-    },
-    {
-        "name": "Truong Khoa hoc Xa hoi va Nhan van",
-        "address": "11, duong CMT8, phuong Dong Hoa, Di An, tinh Binh Duong", 
-        "capacity": 250
-    }
+ {
+  "name": "Trung Tam GDTX",
+  "address": "232 Trung Tam GDTX, Ly Thuong Kiet, Phuong 24, Quan 12, TPHCM",
+  "capacity": 300
+ },
+ {
+  "name": "Nha Van hoa Thieu nhi Thu Duc",
+  "address": "64 Vo Van Ngan, Phuong 96, Quan 69, TPHCM",
+  "capacity": 100
+ },
+ {
+  "name": "Nha thi dau Phu Tho",
+  "address": "17 Kha Van Can, Phuong 21, Quan 10, TPHCM",
+  "capacity": 1000
+ },
+ {
+  "name": "San van dong Quan Doi",
+  "address": "124, duong Vo Thi Sau, Phuong 7, Quan 6, TPHCM",
+  "capacity": 300
+ },
+ {
+  "name": "Truong Khoa hoc Xa hoi va Nhan van",
+  "address": "11, duong CMT8, phuong Dong Hoa, Di An, tinh Binh Duong",
+  "capacity": 250
+ },
+ {
+  "name": "InterContinel Saigon",
+  "address": "39 Le Duan, Ben Nghe, Quan 1, HCM",
+  "capacity": 600
+ },
+ {
+  "name": "Novotel Saigon",
+  "address": "167 Hai Ba Trung, Phuong 6, Quan 3, HCM",
+  "capacity": 300
+ },
+ {
+  "name": "Khu du lich Van Thanh",
+  "address": "Dien Bien Phu, Phuong 25, Binh Thanh, HCM",
+  "capacity": 2000
+ },
+ {
+  "name": "Thao Dien Village",
+  "address": "189-197, 197/1 Nguyen Van Huong, Thao Dien, Quan 2, Thao Dien Quan 2 HCM",
+  "capacity": 400
+ }
 ]
