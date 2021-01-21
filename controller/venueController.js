@@ -12,7 +12,7 @@ exports.getVenues = catchAsync(async (req, res, next) => {
   return next(new AppError('Provide limit query', 404));
  }
 
- let query = Venue.find();
+ let query = Venue.find().select('+active');
 
  const feature = new APIFeatures(query, req.query);
  feature.filter().sort();
