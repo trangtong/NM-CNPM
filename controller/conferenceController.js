@@ -46,11 +46,11 @@ exports.uploadConferencePhotos = upload.fields([
 
 exports.getConferences = catchAsync(async (req, res, next) => {
  if (!req.query) {
-  return new AppError('Empty query', 404);
+  return next(new AppError('Empty query', 404));
  }
 
  if (!Number(req.query.limit)) {
-  return new AppError('Provide limit query', 404);
+  return next(new AppError('Provide limit query', 404));
  }
 
  let query = Conference.find();
@@ -67,7 +67,7 @@ exports.getConferences = catchAsync(async (req, res, next) => {
 
  Conference.paginate(query, {
   page: req.query.page > 0 ? req.query.page : 1,
-  limit: req.query.limit > 0 ? req.query.limit : 10
+  limit: req.query.limit
  })
   .then((result) => {
    res.setHeader('X-Paging-Count', `${result.totalPages}`);

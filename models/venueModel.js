@@ -21,6 +21,11 @@ const venueSchema = new mongoose.Schema({
   type: Number,
   min: [20, `Venue's capacity at least 20 participants`],
   required: [true, 'Venue must have capacity']
+ },
+ active: {
+  type: Boolean,
+  default: true,
+  select: false
  }
 });
 

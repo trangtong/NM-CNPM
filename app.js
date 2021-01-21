@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const errorHandler = require('./controller/errorController');
 const userRouter = require('./routes/userRouter');
+const venueRouter = require('./routes/venueRouter');
+const conferenceRouter = require('./routes/conferenceRouter');
 const viewRouter = require('./routes/viewRouter');
 const cors = require('cors');
 
@@ -11,16 +13,16 @@ app.use(express.json());
 app.use(cookieParser());
 
 if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
+ app.use(morgan('dev'));
 }
 
 // just for local test
 // it can remove error cors (http)
 app.use(
-  cors({
-    credentials: true,
-    exposedHeaders: ['X-Paging-Count', 'X-Paging-Current']
-  })
+ cors({
+  credentials: true,
+  exposedHeaders: ['X-Paging-Count', 'X-Paging-Current']
+ })
 );
 
 app.options('*', cors());
@@ -33,7 +35,9 @@ app.set('views', `${__dirname}/views`);
 app.use('/', viewRouter);
 
 // FOR API (CLIENT RENDER) (uncomment for test api)
-app.use('/api/v1/user', userRouter);
+app.use('/api/v1/users', userRouter);
+app.use('/api/v1/venues', venueRouter);
+app.use('/api/v1/conferences', conferenceRouter);
 
 // default middleware handler
 // app.use(function(err, req, res, next))

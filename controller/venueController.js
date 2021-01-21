@@ -1,15 +1,15 @@
-const Conference = require('./../models/venueModel');
+const Venue = require('./../models/venueModel');
 const catchAsync = require('./../ultilities/catchAsync');
 const AppError = require('../ultilities/appError');
 const APIFeatures = require('../ultilities/APIFeatures.js');
 
-exports.getgetVevues = catchAsync(async (req, res, next) => {
+exports.getVenues = catchAsync(async (req, res, next) => {
  if (!req.query) {
-  return new AppError('Empty query', 404);
+  return next(new AppError('Empty query', 404));
  }
 
  if (!Number(req.query.limit)) {
-  return new AppError('Provide limit query', 404);
+  return next(new AppError('Provide limit query', 404));
  }
 
  let query = Venue.find();
@@ -17,9 +17,9 @@ exports.getgetVevues = catchAsync(async (req, res, next) => {
  const feature = new APIFeatures(query, req.query);
  feature.filter().sort();
 
- Conference.paginate(query, {
+ Venue.paginate(query, {
   page: req.query.page > 0 ? req.query.page : 1,
-  limit: req.query.limit
+  limit: Number(req.query.limit)
  })
   .then((result) => {
    res.setHeader('X-Paging-Count', `${result.totalPages}`);

@@ -71,7 +71,8 @@ const conferenceSchema = new mongoose.Schema({
  },
  active: {
   type: Boolean,
-  default: true
+  default: true,
+  select: false
  }
 });
 
@@ -80,17 +81,23 @@ conferenceSchema.index({ name: 'text' });
 conferenceSchema.plugin(mongoosePaginate);
 
 conferenceSchema.pre(/^find/, function (next) {
+ this.find().select('-__v');
+ next();
+});
+
+conferenceSchema.pre(/^find/, function (next) {
  this.find({ active: { $ne: false } });
  next();
 });
 
 conferenceSchema.pre(/^find/, function (next) {
  this.populate({
-  path: 'venue'
+  path: 'venue',
+  select: '-__v'
  });
 
  next();
 });
 
-const Conference = mongoose.model('Conference', userSchema);
+const Conference = mongoose.model('Conference', conferenceSchema);
 module.exports = Conference;
