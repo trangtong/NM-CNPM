@@ -1,5 +1,3 @@
-const parsePrice = require('./../ultilities/parsePrice');
-
 class APIFeatures {
   constructor(query, queryReqObj) {
     this.query = query;
@@ -10,9 +8,6 @@ class APIFeatures {
     const newQueryObj = { ...this.queryReqObj };
     const excludeFields = ['sort', 'page', 'limit', 'fields'];
     excludeFields.forEach((el) => delete newQueryObj[el]);
-
-    // convert maxPrice, minPrice to operator in mongodb
-    parsePrice(newQueryObj);
 
     // convert condition $or. Ex: name=3,5 -> {'$or': [{name: 3}, {name: 5}]}
     for (const key in newQueryObj) {

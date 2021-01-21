@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const errorHandler = require('./controller/errorController');
 const userRouter = require('./routes/userRouter');
+const viewRouter = require('./routes/viewRouter');
 const cors = require('cors');
 
 const app = express();
@@ -17,7 +18,6 @@ if (process.env.NODE_ENV === 'development') {
 // it can remove error cors (http)
 app.use(
   cors({
-    origin: ['http://127.0.0.1:8000', 'https://adminttshopvn.herokuapp.com'],
     credentials: true,
     exposedHeaders: ['X-Paging-Count', 'X-Paging-Current']
   })

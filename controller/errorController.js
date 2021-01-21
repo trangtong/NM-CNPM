@@ -1,4 +1,4 @@
-const AppError = require('./../ultilities/appError');
+const AppError = require('../ultilities/appError');
 
 /** @type {AppError} err */
 const sendErrorDev = (err, req, res) => {
