@@ -58,7 +58,7 @@ const conferenceSchema = new mongoose.Schema({
   maxlength: [200, `Conference's summary must have maximum 200 characters`],
   required: [true, 'A conference must have summary description']
  },
- desciption: {
+ description: {
   type: String,
   trim: true,
   minlength: [50, `Conference's description must have minimum 50 characters`],

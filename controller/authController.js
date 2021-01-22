@@ -40,6 +40,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 });
 
 exports.login = catchAsync(async (req, res, next) => {
+ console.log('jdsfhdhfjhjhjhhjh');
  const { email, password } = req.body;
 
  // Check email, password is empty?
@@ -259,7 +260,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
  if (
   !user ||
-  !(await user.checkCorrectPassword(req.body.password, user.password))
+  (await user.checkCorrectPassword(req.body.password, user.password))
  ) {
   return next(new AppError(`New password can't not same old password`));
  }

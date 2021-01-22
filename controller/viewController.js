@@ -8,39 +8,23 @@ exports.getOverview = catchAsync(async (req, res, next) => {
  const slides = [
   {
    image: 'slide-1.jpg',
-   title: ['Yonex', 'Duora 10 Lengend'],
-   subtitle: 'Mang đến trải nghiệm tuyệt vời',
-   ref: '/'
+   title: ['Con người', 'với Cách mạng Công nghiệp 4.0'],
+   subtitle: 'Cập nhật ngay',
+   ref:
+    '/vai-tro-con-nguoi-trong-thoi-djai-cong-nghiep-4.0.600ad0e15caad7536e8cacf9'
   },
   {
    image: 'slide-2.jpg',
-   title: ['Lining', 'Turbo Charging 75'],
-   subtitle: 'Vợt tầm trung mạnh mẽ',
-   ref: '/'
+   title: ['Triển lãm', 'nghệ thuật QG'],
+   subtitle: 'Sắp diễn ra',
+   ref: '/hoi-nghi-trien-lam-ve-nghe-thuat-quoc-gia.600ad0e15caad7536e8cacf7'
   },
   {
    image: 'slide-3.jpg',
-   title: ['Yonex', 'Astrox 38S - rẻ bất ngờ'],
-   subtitle: 'Mới ra mắt',
-   ref: '/'
-  }
- ];
-
- const banners = [
-  {
-   image: 'banner-1.jpg',
-   title: 'Yonex',
-   ref: '/'
-  },
-  {
-   image: 'banner-2.jpg',
-   title: 'Lining',
-   ref: '/'
-  },
-  {
-   image: 'banner-3.jpg',
-   title: 'Victor',
-   ref: '/'
+   title: ['Ứng dụng AI', 'TP thông minh'],
+   subtitle: '',
+   ref:
+    '/hoi-nghi-ung-dung-tri-tue-nhan-tao-trong-viec-van-hanh-thanh-pho-thong-minh.600ad0e15caad7536e8cacf8'
   }
  ];
 
@@ -60,7 +44,6 @@ exports.getOverview = catchAsync(async (req, res, next) => {
  res.status(200).render('index', {
   title: 'TTConference - Quản lý hội nghị dễ dàng',
   slides,
-  banners,
   sectionConferences: [
    { title: 'Newest Conference', conferences: conferenceNewest },
    { title: 'Incomming Conference', conferences: conferenceIncomming }
@@ -131,7 +114,7 @@ exports.getAllConference = catchAsync(async (req, res, next) => {
 
 exports.getConferenceDetail = catchAsync(async (req, res, next) => {
  const slugWithID = req.params.slugWithID;
- const id = slugWithID.split('.')[1];
+ const id = slugWithID.split('.').pop();
 
  // conference
  const conference = await Conference.findById(id);

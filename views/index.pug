@@ -18,18 +18,8 @@ block content
                           | #{slide.title[1]}
                         p.owl-slide-animated.owl-slide-subtitle= `${slide.subtitle}`
                         .owl-slide-animated.owl-slide-cta
-                          a.btn_1(href=`${slide.ref}` role='button') Shop Now
-          
-      // /carousel
-      ul#banners_grid.clearfix
-        each banner in banners
-            li
-              a.img_container(href=`${banner.ref}`)
-                img.lazy(src='img/banners_cat_placeholder.jpg' data-src=`img/banner/${banner.image}` alt='')
-                .short_info.opacity-mask(data-opacity-mask='rgba(0, 0, 0, 0.5)')
-                  h3= `${banner.title}`
-                  div
-                    span.btn_1 Shop Now
+                          a.btn_1(href=`${slide.ref}` role='button') Watch Now
+
 
       // /banners_grid
       each section in sectionConferences 
@@ -43,59 +33,31 @@ block content
               .item
                 .grid_item
                   figure
-                    a(href='/listing/conference-detail')
-                      img.owl-lazy(src='#' data-src='https://dataseer.ai/wp-content/uploads/2020/07/blog-tech-conferences.jpg' alt='')
-                  a(href='/listing/conference-detail')
+                    a(href=`/${conference.slug}.${conference._id}`)
+                      img.owl-lazy(style="width: 15rem; height: 10rem;" src='#' data-src= conference.imageCover alt= conference.slug)
+                  a(href=`/${conference.slug}.${conference._id}`)
                     h3= conference.name
                   div
-                    - let formattedDate = new Intl.DateTimeFormat('vi-VN', { dateStyle: 'short', timeStyle: 'short' }).format(conference.startTime)
+                    - let formattedDate = new Intl.DateTimeFormat('vi-VN', { dateStyle: 'short', timeStyle: 'short' }).format(conference.startDate)
                       span
                         | Start: #{formattedDate}
                         br
                         | Capacity: #{conference.venue.capacity}
                   ul
                     li
-                      a.tooltip-1(href='/listing/conference-detail' data-toggle='tooltip' data-placement='left' title='More')
+                      a.tooltip-1(href=`/${conference.slug}.${conference._id}` data-toggle='tooltip' data-placement='left' title='More')
                         svg.bi.bi-info(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
                           path(d='M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z')
 
         // /products_carousel
       .container.margin_60_35
         .main_title
-          a(href='./listing-grid.html')
+          a(href='/all')
             button.btn.btn-primary(type='button')
               svg.bi.bi-box-arrow-right(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16` 16')
                 path(fill-rule='evenodd' d='M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z')
                 path(fill-rule='evenodd' d='M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z')
               | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Watch all
-
-      // /container
-      .bg_gray
-        .container.margin_30
-          #brands.owl-carousel.owl-theme
-            .item
-              a(href='#0')
-                img.owl-lazy(src='#' data-src='#' alt='')
-            // /item
-            .item
-              a(href='#0')
-                img.owl-lazy(src='#' data-src='#' alt='')
-            // /item
-            .item
-              a(href='#0')
-                img.owl-lazy(src='#' data-src='#' alt='')
-            // /item
-            .item
-              a(href='#0')
-                img.owl-lazy(src='#' data-src='#' alt='')
-            // /item
-            .item
-              a(href='#0')
-                img.owl-lazy(src='#' data-src='#' alt='')
-            // /item
-            .item
-              a(href='#0')
-                img.owl-lazy(src='#' data-src='#' alt='')
 
   // COMMON SCRIPTS
   script(src='js/common_scripts.min.js')
