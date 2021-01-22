@@ -35,8 +35,13 @@
   "endDate": "2021-01-15T12:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+<<<<<<< HEAD
   "imageCover": "test.jpg",
   "venue": "6009a03cd1501755acd9e13e",
+=======
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2021/01/210115-dnp-hoi-nghi-chuyen-doi-so.jpg",
+  "venue": "6009473cf99149364c13c118",
+>>>>>>> 30eb407f487b97e0eabbadee98987b3bf576c3f4
   "maxCoferenceSize": 250
  },
  {
@@ -45,8 +50,11 @@
   "endDate": "2020-12-16T22:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e13f",
+  "imageCover": [
+   "https://homedecorplus.vn/wp-content/uploads/201207-nto-hoi-dam-thiet-ke-vi-mot-the-gioi-tot-dep-04.jpg",
+   "https://homedecorplus.vn/wp-content/uploads/201207-nto-hoi-dam-thiet-ke-vi-mot-the-gioi-tot-dep-03.jpg"
+  ],
+  "venue": "6009473cf99149364c13c119",
   "maxCoferenceSize": 200
  },
  {
@@ -55,8 +63,8 @@
   "endDate": "2020-12-09T22:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e140",
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2020/12/dnp-AMAZON-GLOBAL-SELLING-.jpg",
+  "venue": "6009473cf99149364c13c120",
   "maxCoferenceSize": 200
  },
  {
@@ -65,8 +73,8 @@
   "endDate": "2020-12-02T20:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e141",
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2020/12/dnp-L%C3%A0m-s%E1%BB%91ng-Doanh-Nghi%E1%BB%87p-th%E1%BB%9Di-Kh%E1%BB%A7ng-Ho%E1%BA%A3ng-4.jpg",
+  "venue": "6009473cf99149364c13c121",
   "maxCoferenceSize": 150
  },
  {
@@ -75,8 +83,8 @@
   "endDate": "2020-11-17T11:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e143",
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2020/11/201116-dnp-hoi-thao-giai-phap-nang-cao-chat-luong-khong-khi-04-800x511.jpg",
+  "venue": "6009473cf99149364c13c122",
   "maxCoferenceSize": 150
  },
  {
@@ -85,8 +93,8 @@
   "endDate": "2020-11-06T11:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e143",
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2020/10/dnp-phu-nu-co-con-de-mat-co-hoi-cong-viec-1.jpg",
+  "venue": "6009473cf99149364c13c123",
   "maxCoferenceSize": 150
  },
  {
@@ -95,8 +103,8 @@
   "endDate": "2020-06-10T10:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e142",
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2020/09/dnp-PR-Cohesity-1.jpg",
+  "venue": "6009473cf99149364c13c124",
   "maxCoferenceSize": 200
  },
  {
@@ -105,9 +113,9 @@
   "endDate": "2020-09-09T15:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e140",
-  "maxCoferenceSize": 120
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2020/09/dnp-hoi-thao-truc-tuyen-Eyes-on-the-future-2020-08092020-03.jpg",
+  "venue": "6009473cf99149364c13c125",
+  "maxCoferenceSize": 200
  },
  {
   "name": "Webminar: Nghề PR trong thế giới số cần gì ở bạn?",
@@ -115,9 +123,9 @@
   "endDate": "2020-05-13T20:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e13c",
-  "maxCoferenceSize": 300
+  "imageCover": "https://doanhnhanplus.vn/wp-content/uploads/2020/05/dnp-hoi-thao-nghe-pr.jpg",
+  "venue": "6009473cf99149364c13c126",
+  "maxCoferenceSize": 200
  },
  {
   "name": "Giao lưu thương mại VIET NAM - LIEN BANG NGA",
@@ -125,9 +133,9 @@
   "endDate": "2021-01-20T17:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e13d",
-  "maxCoferenceSize": 60
+  "imageCover": "https://vcci-hcm.org.vn/wp-content/uploads/2020/06/Viet_Nga_370x275.jpg",
+  "venue": "6009473cf99149364c13c127",
+  "maxCoferenceSize": 200
  },
  {
   "name": "Hiệp định RCEP & UKVFTA - Cơ hội thúc đẩy chuỗi giá trị nông sản Việt Nam và khu vực Thế Giới",
@@ -135,9 +143,9 @@
   "endDate": "2021-02-15T13:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009a03cd1501755acd9e13d",
-  "maxCoferenceSize": 180
+  "imageCover": "https://vcci-hcm.org.vn/wp-content/uploads/2021/01/Untitled-1.png",
+  "venue": "6009473cf99149364c13c128",
+  "maxCoferenceSize": 200
  },
  {
   "name": "Cơ hội hợp tác & Đầu tư ngành dược phẩm tại Việt Nam",
@@ -155,7 +163,7 @@
   "endDate": "2020-12-18T12:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
+  "imageCover": "https://vcci-hcm.org.vn/wp-content/uploads/2018/01/Dien-dan-nganh-dien-va-nang-luong-tai-tao-HQ-VN403x270.png",
   "venue": "6009473cf99149364c13c130",
   "maxCoferenceSize": 200
  },
@@ -165,58 +173,8 @@
   "endDate": "2020-12-16T17:00:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
+  "imageCover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRu2QinkLqVnMbw9WTKNw-aCRqFfkb7j-xQ&usqp=CAU",
   "venue": "6009473cf99149364c13c131",
-  "maxCoferenceSize": 200
- },
- {
-  "name": "K - Premium xúc tiến thương mại hàng tiêu dùng Hàn Quốc tại Việt Nam",
-  "startDate": "2020-12-10T09:00:00+00:00",
-  "endDate": "2020-12-10T17:00:00+00:00",
-  "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-  "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009473cf99149364c13c132",
-  "maxCoferenceSize": 200
- },
- {
-  "name": "Gặp gỡ giao thương với doanh nghiệp tỉnh Chiết Giang - Trung Quốc & Tham dự Triển lãm Thương mại Quốc tế Chiết Giang tại Việt Nam 2020",
-  "startDate": "2020-12-03T08:30:00+00:00",
-  "endDate": "2020-12-05T16:30:00+00:00",
-  "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-  "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009473cf99149364c13c133",
-  "maxCoferenceSize": 200
- },
- {
-  "name": "Hội thảo Chuyển đổi số trong quản trị doanh nghiệp - Cơ hội và thách thức trong kỷ nguyên 4.0",
-  "startDate": "2020-12-03T08:30:00+00:00",
-  "endDate": "2020-12-03T11:30:00+00:00",
-  "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-  "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009473cf99149364c13c134",
-  "maxCoferenceSize": 150
- },
- {
-  "name": "Giao lưu thương mại Việt Nam - Hàn Quốc ngành năng lượng",
-  "startDate": "2020-12-02T08:30:00+00:00",
-  "endDate": "2020-12-02T16:30:00+00:00",
-  "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-  "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009473cf99149364c13c135",
-  "maxCoferenceSize": 200
- },
- {
-  "name": "Doanh nghiệp ngành phụ tùng oto Thổ Nhỉ Kỳ giao thương với doanh nghiệp Việt Nam và Thái Lan",
-  "startDate": "2021-02-01T08:30:00+00:00",
-  "endDate": "2021-02-05T08:00:00+00:00",
-  "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-  "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
-  "venue": "6009473cf99149364c13c136",
   "maxCoferenceSize": 200
  },
  {
@@ -225,7 +183,7 @@
   "endDate": "2021-01-17T16:30:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
+  "imageCover": "https://enternews.vn/media/uploaded/436/2021/01/quang-binh2.jpg",
   "venue": "6009473cf99149364c13c137",
   "maxCoferenceSize": 300
  },
@@ -235,7 +193,7 @@
   "endDate": "2021-01-08T17:30:00+00:00",
   "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
   "desciption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "imageCover": "test.jpg",
+  "imageCover": "https://enternews.vn/media/uploaded/423/2021/01/08/duantao-enternews-1610100822.jpg",
   "venue": "6009473cf99149364c13c138",
   "maxCoferenceSize": 200
  }
