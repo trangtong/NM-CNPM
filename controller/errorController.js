@@ -1,6 +1,5 @@
-const AppError = require('./../ultilities/appError');
+const AppError = require('../ultilities/appError');
 
-/** @type {AppError} err */
 const sendErrorDev = (err, req, res) => {
  console.error('ERROR: ', err);
 
@@ -10,13 +9,8 @@ const sendErrorDev = (err, req, res) => {
   error: err,
   stack: err.stack
  });
-
- // res.status(err.statusCode).render('404', {
- //   message: err.message
- // });
 };
 
-/** @type {AppError} err */
 const sendErrorProd = (err, req, res) => {
  // operational error
  if (err.isOperational === true) {
