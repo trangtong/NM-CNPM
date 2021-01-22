@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const Venue = require('./venueModel');
 const mongoosePaginate = require('mongoose-paginate-v2');
-const AppError = require('../ultilities/appError');
+const AppError = require('./../ultilities/appError');
 const slugify = require('slugify');
 
 const conferenceSchema = new mongoose.Schema({
