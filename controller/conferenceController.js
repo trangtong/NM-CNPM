@@ -2,7 +2,7 @@ const Conference = require('./../models/conferenceModel');
 const catchAsync = require('./../ultilities/catchAsync');
 
 const multer = require('multer');
-const AppError = require('../ultilities/appError');
+const AppError = require('./../ultilities/appError');
 const crypto = require('crypto');
 const APIFeatures = require('../ultilities/APIFeatures.js');
 

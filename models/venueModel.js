@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
-const AppError = require('../ultilities/appError');
+const AppError = require('./../ultilities/appError');
 
 const venueSchema = new mongoose.Schema({
  name: {
