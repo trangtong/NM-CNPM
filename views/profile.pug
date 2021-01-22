@@ -66,46 +66,6 @@ block content
               p 
                 a(href="/user/updatePassword") Đổi mật khẩu
 
-      .container.bill(style='margin-top: 100px')
-        h2 Your orders
-          table.table
-            thead
-              tr
-                th(scope='col') #
-                th(scope='col') Name
-                th(scope='col') Price
-                th(scope='col') Status
-                th(scope='col') Shipping Unit
-            tbody
-              tr
-                th(scope='row') 1
-                td
-                  a(href='./product-detail.html' target='_blank') Mark
-                td 1000
-                td @mdo
-                td EXPRESS
-              tr
-                th(scope='row') 2
-                td
-                  a(href='./product-detail.html' target='_blank') Jacob
-                td 200
-                td @fat
-                td VIETTEL POST
-              tr
-                th(scope='row') 3
-                td
-                  a(href='./product-detail.html' target='_blank') Larry
-                td 300
-                td @twitter
-                td Giao hang tiet kiem
-            .row
-              .col
-                h4
-                  | Total: 
-                  span 3000
-                  |  VND
-
-
 block append outBody 
   // modal-wrapper
   #edit.modal.fade(role='dialog' aria-labelledby='exampleModalLongTitle' aria-hidden='true')
