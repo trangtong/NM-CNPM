@@ -1,0 +1,46 @@
+mixin buttonPageActive(link, page)
+  li
+    a.active(href="" value=link)= page
+
+mixin buttonPage(link, page)
+  li
+    a(href="" value=link)= page
+
+mixin paginate(maxPageShow)
+  if paginateRes.totalPages > 0
+    .pagination__wrapper
+      if paginateRes.totalPages < paginateRes.page
+        span= 'Không có sản phẩm để hiển thị'
+
+      if paginateRes.totalPages > 1
+        ul.pagination
+          // show max 5 button page 
+          // check has prev button
+
+          if paginateRes.hasPrevPage
+            li
+              a.prev(href="" value=`${paginateRes.page - 1}` title='previous page') &#x276E;
+
+          // paging wrap
+          - var startPage = 0
+            if paginateRes.totalPages < maxPageShow
+              - startPage = 1
+              - maxPageShow = paginateRes.totalPages
+            else if paginateRes.page > 2 && paginateRes.page + maxPageShow - 3  < paginateRes.totalPages
+              - startPage = paginateRes.page - 2
+            else 
+              - startPage = paginateRes.totalPages - maxPageShow + 1
+    
+            - var n = 0
+            - var pages = new Array(maxPageShow)
+              each val, index in pages
+                - var link = `${startPage + index}`
+                  if startPage + index == paginateRes.page
+                    +buttonPageActive(link, startPage + index)
+                  else 
+                    +buttonPage(link, startPage + index)
+
+          // check has next button
+          if paginateRes.hasNextPage
+            li
+              a.next(href="" value=`${paginateRes.page + 1}` title='next page') &#x276F;

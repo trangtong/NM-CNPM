@@ -5,7 +5,10 @@ const viewController = require('../controller/viewController');
 const router = express.Router();
 
 router.get('/', authController.isLoggedIn, viewController.getOverview);
+router.get('/all', viewController.getAllConference);
 router.get('/login', authController.isLoggedIn, viewController.getLogin);
+router.get('/:slugWithID', viewController.getConferenceDetail);
+
 router.get(
  '/user/profile',
  authController.isLoggedIn,

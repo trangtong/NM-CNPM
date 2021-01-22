@@ -3,6 +3,7 @@ const validator = require('validator');
 const Venue = require('./venueModel');
 const mongoosePaginate = require('mongoose-paginate-v2');
 const AppError = require('../ultilities/appError');
+const slugify = require('slugify');
 
 const conferenceSchema = new mongoose.Schema({
  name: {
@@ -99,29 +100,18 @@ const conferenceSchema = new mongoose.Schema({
   type: Boolean,
   default: true,
   select: false
- }
+ },
+ slug: String
 });
 
 conferenceSchema.index({ name: 'text' });
 
 conferenceSchema.plugin(mongoosePaginate);
 
-//  currentStart ---------------------- currentEnd
-//  1. startDate or endDate between (currStart, currEnd)
-//  2. (currStart, currEnd) in (startDate, endDate)
-async function validDate(conferenceModel) {
- let conferences = await conferenceModel.constructor.find();
-
- let formatter = new Intl.DateTimeFormat('vi-VN', {
-  dateStyle: 'full'
- });
-
- if (conferences.count > 0) {
-  return false;
- }
-
- return true;
-}
+conferenceSchema.pre('save', function (next) {
+ this.slug = slugify(this.name, { lower: true });
+ next();
+});
 
 conferenceSchema.pre(/^find/, function (next) {
  this.find().select('-__v');

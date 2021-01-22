@@ -31,59 +31,33 @@ block content
                   div
                     span.btn_1 Shop Now
 
-
       // /banners_grid
-      .container.margin_60_35
-        .main_title
-          h2 Latest
-          span Conference
+      each section in sectionConferences 
 
-        .owl-carousel.owl-theme.products_carousel
-          .item
-            .grid_item
+        .container.margin_60_35
+          .main_title
+            h2= section.title
+
+          .owl-carousel.owl-theme.products_carousel
+            each conference in section.conferences 
+              .item
+                .grid_item
                   figure
                     a(href='/listing/conference-detail')
                       img.owl-lazy(src='#' data-src='https://dataseer.ai/wp-content/uploads/2020/07/blog-tech-conferences.jpg' alt='')
                   a(href='/listing/conference-detail')
-                    h3 DataSeer ISMTE virtual conferences
+                    h3= conference.name
                   div
-                    span
-                      | Time: 8:00 01-25-2021 
-                      br
-                      | Capacity: 100
+                    - let formattedDate = new Intl.DateTimeFormat('vi-VN', { dateStyle: 'short', timeStyle: 'short' }).format(conference.startTime)
+                      span
+                        | Start: #{formattedDate}
+                        br
+                        | Capacity: #{conference.venue.capacity}
                   ul
                     li
                       a.tooltip-1(href='/listing/conference-detail' data-toggle='tooltip' data-placement='left' title='More')
                         svg.bi.bi-info(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
                           path(d='M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z')
-    
-      // /products_carousel
-      // /container
-      .container.margin_60_35
-        .main_title
-          h2 Incoming
-          span Conference
-
-        .owl-carousel.owl-theme.products_carousel
-          // /item
-          .item
-            .grid_item
-              figure
-                a(href='/listing/conference-detail')
-                  img.owl-lazy(src='#' data-src='https://dataseer.ai/wp-content/uploads/2020/07/blog-tech-conferences.jpg' alt='')
-              a(href='/listing/conference-detail')
-                h3 DataSeer ISMTE virtual conferences
-              div
-                span
-                  | Time: 8:00 01-25-2021 
-                  br
-                  | Capacity: 100
-              ul
-                li
-                  a.tooltip-1(href='/listing/conference-detail' data-toggle='tooltip' data-placement='left' title='More')
-                    svg.bi.bi-info(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
-                      path(d='M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z')
-          // /grid_item
 
         // /products_carousel
       .container.margin_60_35
